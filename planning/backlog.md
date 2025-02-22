@@ -1,30 +1,28 @@
 # Backlog
 
-A collection of user stories you can choose from. Stories inside each priority
-level are not necessarily in order, it's up to your group to decide how they fit
-into your strategy. These are also just suggestion, feel free to change them or
-create your own!
+The backlog includes all tasks and features required to complete the simple calculator
+project. It outlines basic features, prioritized by importance.
 
-## Must-Haves
+## Main page
+
+### Must-Haves
 
 > these are necessary for basic usability
 
-- [ ] As a ... I want to ... so that ...
-  - _Given [context] when [a specific action is performed] then [a set of
-    consequences should occur]_
+- As a user, I need just a readable `input` with the calculating result.
+- As a user, I need a `buttons` with numbers to start entering values.
+- As a user, I need useful `buttons` with math operators to calculate the value.
 
-## Should-Haves
+### Should-Haves
 
 > these will complete the user experience, but are not necessary
 
-- [ ] As a ... I want to ... so that ...
-  - _Given [context] when [a specific action is performed] then [a set of
-    consequences should occur]_
+- As a user I want to see some `buttons` with advanced calculator functions,
+  so I can calculate more complex values.
 
-## Could-Haves
+### Could-Haves
 
 > would be really cool ... if there's time
 
-- [ ] As a ... I want to ... so that ...
-  - _Given [context] when [a specific action is performed] then [a set of
-    consequences should occur]_
+- As a user I want to see some `video links` so I can call an ai-assistant to
+  find the answer to the question of what formulas to use to determine certain tasks.

@@ -1,55 +1,45 @@
-# Project Name
+# HYF Website
 
 <!-- describe your project -->
+
+This project is a simple JavaScript-based calculator.
+[Calculator](https://kovbinka.github.io/calculator/).
 
 ---
 
 ## Setup
 
-<!-- what code do you need just to open the project? this might include:
-  - boilerplate code (https://brandlitic.com/what-is-boilerplate-code/)
-  - loading program data
-  - rendering the initial user interface
--->
+- Create a new rep
+- Add collaborators and protect the main branch
+- Create a project board and issues
+- Clone the repo to a local machine
+- Create branches for each issue
 
 ---
 
-<!-- copy this section once for each must-have user story -->
+## Landing page
 
-## user story
+### Main content section
 
-<!-- each issue created from this section will have the `for: user story` label -->
+This feature develops on a branch `main-content`.
 
-> "as a ... i can ... so that ..."
+#### JS
 
-<!-- write any extra notes or description -->
+- Add the `array` with the values of buttons
+- Create a `div's` for the `row's` with buttons
+- Add `class` for `div's`
+- Create a `button's` inside the `row`
+- Add `class` for `button's`
+- Add the values from `array` to `button's`
+- Calculating through the `if..else` statements
+- Showing the result
 
-<!-- describe the tasks to build this user story
-  these will have the `type: logic` label, for example
-  not all projects will have all types of tasks
-  and these are not the only possible types, just some suggestions
--->
+#### HTML
 
-### Logic: user story
+- Add `div` to create a main container
+- Add `div's` to create place for display result and for buttons
 
-- a _logic_ task -> this will become one issue
-  - [ ] some checkboxes for this task
-  - [ ] these will be copy-pasted into the issue
+#### CSS
 
-### Interface: user story
-
-- an _interface_ task -> this will become one issue
-  - [ ] some checkboxes for this task
-  - [ ] these will be copy-pasted into the issue
-
-### Interaction: user story
-
-- an _interaction_ task -> this will become one issue
-  - [ ] some checkboxes for this task
-  - [ ] these will be copy-pasted into the issue
-
-### Documentation: user story
-
-- a _documentation_ task -> this will become one issue
-  - [ ] some checkboxes for this task
-  - [ ] these will be copy-pasted into the issue
+- Add style to main container
+- Add style to buttons and result `div's`

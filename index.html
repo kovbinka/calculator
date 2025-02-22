@@ -4,10 +4,29 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="./media/icons8-calculator-64.png"
+        />
         <link rel="stylesheet" href="./css/index.css" />
-        <title>JS starter</title>
+        <link rel="stylesheet" href="./css/land.css" />
+        <title>Calculator</title>
     </head>
     <body>
+        <div id="header">
+            <div class="container">
+                <div class="calculator">
+                    <div class="input" id="display-result"></div>
+                    <div id="buttons" class="buttons"></div>
+                </div>
+            </div>
+        </div>
+
+        <audio id="clean-fx" src="./media/clean.mp3"></audio>
+        <audio id="error-fx" src="./media/message.mp3"></audio>
+        <audio id="del-fx" src="./media/delete.mp3"></audio>
+        <audio id="equal-fx" src="./media/equal.mp3"></audio>
         <script src="./src/index.js"></script>
     </body>
 </html>

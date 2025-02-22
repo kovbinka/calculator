@@ -14,6 +14,7 @@
     "package-lock.json",
     "**/*.mp4",
     "**/*.svg",
-    "accessibility_report"
+    "accessibility_report",
+    "kovbinka"
   ]
 }

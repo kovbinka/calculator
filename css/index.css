@@ -1,12 +1,207 @@
-*,
-*::before,
-*::after {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s-ease;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #565454;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background: white;
+    background: radial-gradient(
+        125% 125% at 50% 10%,
+        #c47777 40%,
+        rgb(56, 7, 192) 100%
+    );
+    z-index: 10;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset -5px -5px 12px #f1acac, 5px 5px 12px rgba(0, 0, 0, 0.16);
+    display: grid;
+    grid-template-columns: repeat(4, 66px);
+    transition: 1s;
+}
+.design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding-top: 2rem;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 180px;
+    z-index: 100;
+    color: #fff;
+    cursor: default;
+}
+
+.video {
+    position: absolute;
+    object-fit: cover;
+    width: 85rem;
+    height: 10rem;
+    border-radius: 80px;
+    z-index: 10;
+    mix-blend-mode: color;
+}
+
+.input {
+    grid-column: span 4;
+    background-color: floralwhite;
+    height: 70px;
+    width: 260px;
+    box-shadow: inset -5px -5px 12px #ffff,
+        inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+    border: none;
+    border-radius: 30px;
+    color: rgb(3, 2, 0);
+    font-size: x-large;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.row {
+    width: 18em;
+    margin-left: 3px;
+}
+
+.btn {
+    height: 48px;
+    width: 48px;
+    box-shadow: -5px-5px 12px #ffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-weight: 600;
+    color: rgb(56, 56, 56);
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.cleaning:hover {
+    background-color: #f34873;
+}
+
+.plus:hover {
+    background-color: #87ff87;
+}
+
+.divide:hover {
+    background-color: #9387ff;
+}
+
+.minus:hover {
+    background-color: #e604d3;
+}
+
+.equal {
+    width: 115px;
+    border-radius: 40px;
+    box-shadow: -5px-5px 12px #ffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
+}
+
+.equal {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 14px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.equal:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.equal:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+.equal::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.equal:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
 }

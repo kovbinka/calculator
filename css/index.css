@@ -57,6 +57,7 @@ h1 {
     z-index: 100;
     color: #fff;
     cursor: default;
+    transition: 1s;
 }
 
 .video {
@@ -67,6 +68,7 @@ h1 {
     border-radius: 80px;
     z-index: 10;
     mix-blend-mode: color;
+    transition: 1s;
 }
 
 .input {
@@ -204,4 +206,34 @@ button:hover {
     -webkit-transition: box-shadow 0.2s ease-in;
     -moz-transition: box-shadow 0.2s ease-in;
     transition: box-shadow 0.2s ease-in;
+}
+
+
+/* media for iPhones*/
+
+@media only screen and (max-width: 1375px) {
+    h1 {
+        font-size: 120px;
+    }
+    .video {
+        width: 55rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    h1 {
+        font-size: 40px;
+    }
+    .video {
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    h1 {
+        font-size: 40px;
+    }
+    .video {
+        width: 85%;
+    }
 }

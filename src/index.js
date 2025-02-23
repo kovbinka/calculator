@@ -6,6 +6,10 @@ const errorSound = document.getElementById('error-fx');
 const deleteSound = document.getElementById('del-fx');
 const equalSound = document.getElementById('equal-fx');
 
+// add class to `ai-container`
+const aiContainer = document.getElementById('ai-container');
+aiContainer.classList.add('ai-container');
+
 // add class to `header`
 const header = document.getElementById('header');
 header.classList.add('design');
@@ -76,6 +80,96 @@ data.forEach((row) => {
 
     buttons.append(rowElement);
 });
+
+const aiButton = document.createElement('button');
+aiButton.innerText = 'AI Assistant';
+aiButton.classList.add('ai-btn');
+aiButton.addEventListener('click', () => {
+    createModal();
+    openModal();
+});
+aiContainer.appendChild(aiButton);
+
+function createModal() {
+    const modal = document.createElement('div');
+    modal.id = 'ai-modal';
+    modal.classList.add('modal');
+
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+
+    const closeBtn = document.createElement('span');
+    closeBtn.classList.add('close');
+    closeBtn.innerText = '×';
+    closeBtn.onclick = closeModal;
+
+    const title = document.createElement('h3');
+    title.innerText = 'How can i help you?🤖';
+
+    const input = document.createElement('textarea');
+    input.id = 'ai-input';
+    input.placeholder = 'Do not know how to calculate the radius? Just ask me here!';
+
+    const submitBtn = document.createElement('button');
+    submitBtn.classList.add('ai-send-button');
+    submitBtn.innerText = 'Send';
+    submitBtn.onclick = askAI;
+
+    const response = document.createElement('div');
+    response.id = 'ai-response';
+    response.innerText = 'Response will appear here...';
+
+    modalContent.append(closeBtn, title, input, submitBtn, response);
+    modal.append(modalContent);
+    aiContainer.appendChild(modal);
+}
+
+function openModal() {
+    document.getElementById('ai-modal').style.display = 'flex';
+    aiButton.style.display = 'none';
+}
+
+function closeModal() {
+    aiButton.style.display = 'flex';
+    const modal = document.getElementById('ai-modal');
+    if (modal) {
+        modal.remove(); // delete modal window after closing
+    }
+}
+
+async function askAI() {
+    const input = document.getElementById('ai-input').value;
+    const responseDiv = document.getElementById('ai-response');
+    
+    responseDiv.innerText = 'Loading...';
+
+    try {
+        const response = await fetch('https://api.together.xyz/inference', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer mykey', // API KEY
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                model: 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
+                prompt: input,
+                max_tokens: 100,
+                temperature: 0.7
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Raw response:', data); //
+        responseDiv.innerText = data.output?.choices[0]?.text || 'Sorry, I can’t answer that.';
+    } catch (error) {
+        responseDiv.innerText = 'Error: ' + error.message;
+        console.error('Fetch error:', error);
+    }
+}
 
 let result = '';
 

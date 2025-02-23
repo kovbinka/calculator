@@ -1,6 +1,6 @@
 # Simple calculator
 
-![Example screenshot](./planning/screenweb.png)
+![Example screenshot](./planning/screenweb2.png)
 
 ## Table of contents
 

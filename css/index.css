@@ -13,6 +13,106 @@ body {
     text-decoration: none;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(#353b48, #4432e4c0, #252525);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+
+.ai-container {
+    display: flex;
+    width: 10%;
+    z-index: 300;
+    background-color: transparent;
+    position: absolute;
+    color: #9387ff;
+    transform: translateY(20rem);
+    justify-content: center;
+    align-items: center;
+}
+
+.ai-btn {
+    position: fixed;
+    padding: 10px 20px;
+    font-family: "Poppins";
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    border: dashed;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.4s;
+    z-index: 1000;
+}
+
+.ai-btn:hover {
+    background-color: #ff8a05;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(1.4rem);
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.11);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#ai-input {
+    height: 50px;
+    width: 245px;
+    resize: none;
+    background-color: rgba(255, 200, 200, 0.205);
+    text-align: center;
+    margin-top: 6px;
+    font-family: "Poppins";
+}
+
+#ai-response {
+    height: 45px;
+    overflow-y: scroll;
+    margin-bottom: 3px;
+}
+
+.ai-send-button {
+    height: 30px;
+    width: 88px;
+    box-shadow: -5px-5px 12px #ffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-weight: 600;
+    color: rgb(56, 56, 56);
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .container {
     height: 100vh;
     width: 100vw;
@@ -220,16 +320,35 @@ button:hover {
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 80px;
+    }
+    .video {
+        width: 40rem;
+        height: 13%;
+    }
+}
+
 @media only screen and (max-width: 950px) {
     h1 {
         font-size: 40px;
     }
     .video {
-        width: 20rem;
+        width: 40rem;
     }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    .video {
+        width: 26.5rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
     h1 {
         font-size: 40px;
     }

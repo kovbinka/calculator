@@ -88,7 +88,7 @@ body {
 
 #ai-response {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     height: 45px;
     overflow-y: scroll;
     margin-bottom: 3px;

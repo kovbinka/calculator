@@ -26,6 +26,7 @@ with buttons for entering numbers, operators, clearing ("C🗑️"), and deletin
 the last character ("Del"), along with sound effects for user actions. In case
 of an error, the calculator displays "try again😱," which automatically clears
 when new input begins.
+You can also use the AI-assistant right on the page. Try it!
 
 ## Technologies
 

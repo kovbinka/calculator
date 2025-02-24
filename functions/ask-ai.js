@@ -10,9 +10,9 @@ exports.handler = async (event) => {
           },
           body: JSON.stringify({
               model: 'meta-llama/Llama-3.3-70B-Instruct-Turbo',
-              prompt: input,
-              max_tokens: 100,
-              temperature: 0.7
+              prompt: `Provide a clear and accurate answer: ${input}`,
+              max_tokens: 200,
+              temperature: 0.3
           })
       });
 

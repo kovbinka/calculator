@@ -18,7 +18,7 @@ body {
   }
   
   ::-webkit-scrollbar-track {
-    background: linear-gradient(#353b48, #4432e4c0, #252525);
+    background: linear-gradient(#ffffff, #4432e4c0, #d8d2d2);
     border-radius: 5px;
   }
   
@@ -33,7 +33,7 @@ body {
     z-index: 300;
     background-color: transparent;
     position: absolute;
-    color: #9387ff;
+    color: #fff4e2;
     transform: translateY(20rem);
     justify-content: center;
     align-items: center;
@@ -54,7 +54,7 @@ body {
 }
 
 .ai-btn:hover {
-    background-color: #ff8a05;
+    background-color: #ff4c05;
 }
 
 .modal {
@@ -72,7 +72,7 @@ body {
     background: rgba(255, 255, 255, 0.11);
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 5px;
+    border-radius: 14px;
     text-align: center;
 }
 
@@ -87,18 +87,19 @@ body {
 }
 
 #ai-response {
+    display: flex;
+    align-items: center;
     height: 45px;
     overflow-y: scroll;
     margin-bottom: 3px;
 }
 
 .ai-send-button {
-    height: 30px;
+    height: 27px;
     width: 88px;
-    box-shadow: -5px-5px 12px #ffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
     border: none;
     border-radius: 10px;
-    margin-bottom: 4px;
+    background-color: whitesmoke;
     font-family: 'Poppins', sans-serif;
     font-size: small;
     cursor: pointer;
